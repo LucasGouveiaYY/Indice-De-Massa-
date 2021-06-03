@@ -1,0 +1,66 @@
+body{
+    background-color:black;
+}
+
+*{
+ padding: 0px; 
+ margin: 0px
+}
+
+h1, h2{
+    margin-top: 40px;
+    color:black;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 60px
+
+}
+
+#paragrafo{
+    font-family: 'Odibee Sans', cursive;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.direita{
+    float: left;
+    background-image: url(img/melhor-balanca.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: right;
+    height: 600px;
+    image-rendering: pixelated;
+    width: 40%;
+    max-width: 100%;
+    max-height: 100%;
+
+
+    
+}
+
+.esquerda{
+    float: left;
+    background-image: url(img/img2.svg);
+    height: 600px;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+}
+
+.formulario input{
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #3c3939;
+    color: white;
+
+}
+.formulario{
+    padding: 10px;
+    margin-top:27%;
+}
+#enviar{
+margin-left: 22%;
+}
+    

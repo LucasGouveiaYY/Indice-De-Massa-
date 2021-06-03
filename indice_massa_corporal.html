@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">	
+	<title>Calculadora indice massa corporal</title>
+	
+	<script>
+            function calcularImc(){
+			var nome = document.getElementById('nome').value
+			var altura = document.getElementById('altura').value
+			var peso =  document.getElementById('peso').value
+			var classificacao  = ""
+			altura = parseInt(altura)
+			peso = parseInt(peso)
+			altura /=100
+			altura *=altura
+
+			var m = peso / altura
+            					
+			if (m < 16){ 
+				classificacao= 'Baixo peso muito grave'
+			}
+			if (m >= 16 && m <= 16.99 ) {
+				 classificacao='Baixo peso grave'
+			}
+			if (m >= 17 && m <= 18.49 ) {
+				classificacao='Baixo peso'
+
+			}
+			if (m >=18.50 && m <= 24.99) { 
+				classificacao='Peso normal'
+			}
+
+			if (m >=25 && m <= 29.99) {
+				classificacao='Sobrepeso'
+			}
+			if (m >=30 && m <= 34.99) {
+				classificacao='Obesidade grau I'
+			}
+			if (m >=35 && m <= 39.99) {
+				classificacao='Obesidade grau II'
+			}
+			if (m > 40) { 
+				classificacao='obesidade grau III'
+			}
+            m.toFixed(2)
+			
+			document.getElementById("paragrafo").innerHTML = nome + ' possui índice de massa corporal igual a '+ m.toFixed(2) + ', sendo classificado como: '+ classificacao
+			
+			
+        }
+		</script>
+			
+	</head>
+
+		
+		<body>
+			
+			<div class="direita">
+				<h1>Calculo IMC </h1>	
+			
+				<div class ='formulario'>
+					<input type='text' id='nome' placeholder="Digite seu nome"> <Br>
+					<input type='text' id='altura'placeholder="Digite sua altura em cm"><Br>
+					<input type='text' id='peso' placeholder="Digite seu peso em kg"><Br>
+					<input id="enviar"onclick="calcularImc()" type="submit" value="Calcular">
+				</div>	
+
+		</div>	
+
+		<div class='esquerda'>
+
+			<h2>
+				RESULTADO
+			</h2>
+
+			<p id="paragrafo"></p>
+
+
+		</div>
+
+
+		</body>
+
+
+
+
+</html>
